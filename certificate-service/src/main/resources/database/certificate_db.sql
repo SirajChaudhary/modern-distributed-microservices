@@ -1,0 +1,12 @@
+-- CREATE DATABASE certificate_db;
+
+-- CREATE TABLE
+CREATE TABLE certificates
+(
+    id BIGSERIAL PRIMARY KEY,
+    user_id BIGINT NOT NULL,
+    course_id BIGINT NOT NULL,
+    certificate_number VARCHAR(100) NOT NULL UNIQUE,
+    issued_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

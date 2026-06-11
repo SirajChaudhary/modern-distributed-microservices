@@ -1,0 +1,22 @@
+server:
+  # Default Eureka dashboard port
+  port: 8761
+
+spring:
+  application:
+    # Service name visible in Eureka dashboard
+    name: discovery-service
+
+eureka:
+  client:
+    # Discovery Service should not register itself
+    register-with-eureka: false
+
+    # Discovery Service should not fetch registry information
+    fetch-registry: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
